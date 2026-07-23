@@ -141,6 +141,9 @@ def salvar_em_excel(df, nome_arquivo):
         for col_num, _ in enumerate(df.columns):
             worksheet.set_column(col_num, col_num, None, formato)
 
+
+
+
 #--------------------------------------------------------------------------------------
 #
 #                          CONFIGURAÇÕES INICIAIS
@@ -151,11 +154,11 @@ def salvar_em_excel(df, nome_arquivo):
 
 #caso referencial for painel esquerdo do avião, pegar o valor 3-4
 #caso referencial for painel direito do avião, pegar o valor 1-2
-corda_frente = 0.546941  # corda do painel DLM da frente (da seção que tem o aileron, não complica porra)
+corda_frente = 0.556558  # corda do painel DLM da frente (da seção que tem o aileron, não complica porra)
 
-corda_tras = 0.133685    # auto explicativo, não vou nem explicar aqui 
+corda_tras = 0.303303    # auto explicativo, não vou nem explicar aqui 
 
-num_paineis_corda = 50   # tem como calcular o valor ideal para os paineis
+num_paineis_corda = 40   # tem como calcular o valor ideal para os paineis
                          # mas fica uma merda, pq ele sempre subestima   
 
 df_malha_completa = gerar_tabela_completa(corda_frente, corda_tras, num_paineis_corda)
